@@ -5,12 +5,14 @@
 An Idealista clone is a real estate marketplace platform that connects property buyers, sellers, and renters. The platform enables users to browse, list, search, and manage property listings with advanced filtering, pricing analysis, and user engagement features.
 
 **Target Users:**
+
 - Property sellers/landlords wanting to list properties
 - Property buyers/renters searching for properties
 - Real estate agents managing multiple listings
 - Platform administrators
 
 **Core Value Proposition:**
+
 - Comprehensive real estate marketplace with advanced search and filtering
 - Real-time property availability and pricing information
 - Secure communication between buyers/sellers
@@ -22,6 +24,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ## 2. Core Functionalities
 
 ### 2.1 User Management
+
 - **User Registration & Authentication**
   - Email/password registration
   - Email verification
@@ -37,6 +40,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Account settings and preferences
 
 ### 2.2 Property Listings
+
 - **Create/Manage Listings**
   - Property details (address, location coordinates, property type)
   - Property specifications (bedrooms, bathrooms, square meters, floor, parking)
@@ -61,6 +65,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Generate QR codes for listings
 
 ### 2.3 Search & Discovery
+
 - **Advanced Search Filters**
   - Location-based search (city, neighborhood, district)
   - Property type filter (apartment, house, land, commercial, etc.)
@@ -85,6 +90,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Email notifications for saved search results
 
 ### 2.4 Property Details Page
+
 - **Comprehensive Property Information**
   - Full property description and photos
   - Property specifications and features
@@ -103,6 +109,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Report inappropriate listing
 
 ### 2.5 Favorites & Wishlist Management
+
 - **Save Properties**
   - Add/remove properties from favorites
   - Create multiple wishlists with custom names
@@ -111,6 +118,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Export wishlist (PDF, email)
 
 ### 2.6 Messaging & Communication
+
 - **In-App Messaging**
   - Real-time chat between buyers and sellers
   - Message history
@@ -125,6 +133,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Auto-responses for sellers
 
 ### 2.7 Appointments & Viewings
+
 - **Schedule Viewings**
   - Calendar-based appointment scheduling
   - Available time slots for properties
@@ -133,6 +142,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Viewing history and notes
 
 ### 2.8 Reviews & Ratings
+
 - **User Reviews**
   - Rate sellers/agents (1-5 stars)
   - Written reviews and comments
@@ -141,6 +151,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Filter reviews by rating
 
 ### 2.9 Price Analytics & Market Intelligence
+
 - **Price History**
   - Track price changes over time
   - Price comparison with similar properties
@@ -154,6 +165,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Supply and demand analytics
 
 ### 2.10 Premium Features
+
 - **Featured Listings**
   - Highlight listings with special badges
   - Featured section on homepage
@@ -169,6 +181,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
   - Branding customization on listings
 
 ### 2.11 Admin Panel
+
 - **Content Management**
   - Manage users and accounts
   - Review and moderate listings
@@ -194,6 +207,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ## 3. Technical Architecture
 
 ### 3.1 Frontend Stack
+
 - **Framework:** React.js or Vue.js
 - **State Management:** Redux/Vuex
 - **Styling:** Tailwind CSS or Material-UI
@@ -206,6 +220,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 - **Bundler:** Webpack or Vite
 
 ### 3.2 Backend Stack
+
 - **Language:** Node.js (Express.js) or Python (Django/FastAPI)
 - **Database:** PostgreSQL (primary), Redis (caching/sessions)
 - **Search Engine:** Elasticsearch for property search
@@ -217,6 +232,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 - **Maps API:** Google Maps API
 
 ### 3.3 Deployment & Infrastructure
+
 - **Hosting:** AWS, Google Cloud, or Azure
 - **Containerization:** Docker
 - **Orchestration:** Kubernetes (optional)
@@ -225,6 +241,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 - **CDN:** CloudFlare, AWS CloudFront
 
 ### 3.4 Security
+
 - **Encryption:** SSL/TLS, AES encryption for sensitive data
 - **Rate Limiting:** DDoS protection
 - **Input Validation:** Server-side validation
@@ -238,6 +255,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ## 4. User Flows
 
 ### 4.1 Buyer User Flow
+
 1. **Discovery Phase**
    - User lands on homepage
    - Browses featured listings
@@ -265,6 +283,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
    - May make offer or inquire about other properties
 
 ### 4.2 Seller User Flow
+
 1. **Account Setup**
    - User registers and verifies email
    - Completes profile information
@@ -291,6 +310,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
    - May list additional properties
 
 ### 4.3 Admin User Flow
+
 1. **Dashboard Overview**
    - Views key metrics and statistics
    - Monitors user activity
@@ -312,6 +332,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ### 5.1 Core Tables
 
 #### users
+
 ```
 - id (UUID, Primary Key)
 - email (String, Unique, Not Null)
@@ -330,6 +351,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### properties
+
 ```
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key -> users)
@@ -366,6 +388,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### property_images
+
 ```
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key -> properties)
@@ -377,6 +400,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### favorites
+
 ```
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key -> users)
@@ -386,6 +410,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### messages
+
 ```
 - id (UUID, Primary Key)
 - sender_id (UUID, Foreign Key -> users)
@@ -398,6 +423,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### appointments
+
 ```
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key -> properties)
@@ -411,6 +437,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### reviews
+
 ```
 - id (UUID, Primary Key)
 - reviewer_id (UUID, Foreign Key -> users)
@@ -424,6 +451,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### price_history
+
 ```
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key -> properties)
@@ -434,6 +462,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### saved_searches
+
 ```
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key -> users)
@@ -444,6 +473,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ```
 
 #### payments
+
 ```
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key -> users)
@@ -462,6 +492,7 @@ An Idealista clone is a real estate marketplace platform that connects property 
 ## 6. API Endpoints
 
 ### 6.1 Authentication Endpoints
+
 ```
 POST   /api/auth/register           - Register new user
 POST   /api/auth/login              - User login
@@ -474,6 +505,7 @@ POST   /api/auth/social-login       - Social login (Google/Facebook)
 ```
 
 ### 6.2 User Endpoints
+
 ```
 GET    /api/users/:id               - Get user profile
 PUT    /api/users/:id               - Update user profile
@@ -485,6 +517,7 @@ DELETE /api/users/:id/account       - Delete account
 ```
 
 ### 6.3 Property Listing Endpoints
+
 ```
 GET    /api/properties              - List all properties (with filters)
 POST   /api/properties              - Create new property listing
@@ -500,6 +533,7 @@ GET    /api/properties/:id/price-history - Get price history
 ```
 
 ### 6.4 Search & Filter Endpoints
+
 ```
 GET    /api/search                  - Advanced property search
 POST   /api/saved-searches          - Save search filter
@@ -509,6 +543,7 @@ POST   /api/saved-searches/:id/alerts - Toggle search alerts
 ```
 
 ### 6.5 Favorites Endpoints
+
 ```
 GET    /api/favorites               - Get user's favorites
 POST   /api/favorites               - Add property to favorites
@@ -520,6 +555,7 @@ DELETE /api/wishlists/:id          - Delete wishlist
 ```
 
 ### 6.6 Messaging Endpoints
+
 ```
 GET    /api/messages/inbox          - Get message inbox
 GET    /api/messages/conversation/:userId - Get conversation with user
@@ -530,6 +566,7 @@ POST   /api/messages/block/:userId  - Block user
 ```
 
 ### 6.7 Appointments Endpoints
+
 ```
 POST   /api/appointments            - Schedule viewing
 GET    /api/appointments            - Get user's appointments
@@ -539,6 +576,7 @@ GET    /api/appointments/:id/confirm - Confirm appointment
 ```
 
 ### 6.8 Reviews Endpoints
+
 ```
 GET    /api/reviews/user/:userId    - Get user reviews
 POST   /api/reviews                 - Submit review
@@ -548,6 +586,7 @@ GET    /api/reviews/property/:propertyId - Get property reviews
 ```
 
 ### 6.9 Analytics Endpoints
+
 ```
 GET    /api/analytics/market/prices - Get market price data
 GET    /api/analytics/property/:id   - Get property analytics
@@ -556,6 +595,7 @@ GET    /api/analytics/trends         - Get market trends
 ```
 
 ### 6.10 Admin Endpoints
+
 ```
 GET    /api/admin/dashboard         - Admin dashboard stats
 GET    /api/admin/users             - Manage users
@@ -569,6 +609,7 @@ GET    /api/admin/analytics         - Platform analytics
 ```
 
 ### 6.11 Payment Endpoints
+
 ```
 POST   /api/payments/create         - Create payment intent
 POST   /api/payments/confirm        - Confirm payment
@@ -583,6 +624,7 @@ POST   /api/payments/refund         - Request refund
 ### 7.1 Development Phases
 
 **Phase 1: MVP (Core Features)**
+
 - User authentication and profiles
 - Basic property listing creation
 - Search and filtering
@@ -590,6 +632,7 @@ POST   /api/payments/refund         - Request refund
 - Basic appointment scheduling
 
 **Phase 2: Enhancement**
+
 - Map view integration
 - Advanced analytics and price history
 - Review and rating system
@@ -597,6 +640,7 @@ POST   /api/payments/refund         - Request refund
 - Premium features
 
 **Phase 3: Scale & Optimize**
+
 - Admin panel and moderation
 - CRM tools for agents
 - Advanced market analytics
@@ -606,6 +650,7 @@ POST   /api/payments/refund         - Request refund
 ### 7.2 Key Considerations
 
 **Performance:**
+
 - Implement caching for frequently accessed data (Redis)
 - Use Elasticsearch for fast property search
 - Optimize image delivery with CDN
@@ -613,12 +658,14 @@ POST   /api/payments/refund         - Request refund
 - Database query optimization and indexing
 
 **Scalability:**
+
 - Horizontal scaling with load balancers
 - Microservices architecture (optional)
 - Message queue for async tasks (RabbitMQ/Kafka)
 - Database replication and sharding strategy
 
 **Security:**
+
 - Implement API rate limiting
 - Encrypt sensitive data (PII, payment info)
 - Regular security audits and penetration testing
@@ -626,6 +673,7 @@ POST   /api/payments/refund         - Request refund
 - Two-factor authentication for sensitive accounts
 
 **User Experience:**
+
 - Responsive design (mobile-first approach)
 - Fast page load times
 - Intuitive navigation
@@ -633,6 +681,7 @@ POST   /api/payments/refund         - Request refund
 - Email digests and alerts
 
 ### 7.3 Third-Party Integrations
+
 - **Google Maps API** - Location services and maps
 - **Stripe/PayPal** - Payment processing
 - **Twilio** - SMS notifications
@@ -642,6 +691,7 @@ POST   /api/payments/refund         - Request refund
 - **Google Analytics** - User analytics
 
 ### 7.4 Testing Strategy
+
 - **Unit Testing:** Jest/Mocha for backend and frontend
 - **Integration Testing:** API endpoint testing
 - **E2E Testing:** Selenium/Cypress for user flows
@@ -649,12 +699,14 @@ POST   /api/payments/refund         - Request refund
 - **Security Testing:** OWASP vulnerability scanning
 
 ### 7.5 Monitoring & Analytics
+
 - **Error Tracking:** Sentry
 - **Performance Monitoring:** New Relic or DataDog
 - **Analytics:** Google Analytics, Mixpanel
 - **Logging:** ELK Stack (Elasticsearch, Logstash, Kibana)
 
 ### 7.6 Future Enhancements
+
 - Virtual property tours (360° photos, video tours)
 - AI-powered property recommendations
 - Mortgage calculator integration
